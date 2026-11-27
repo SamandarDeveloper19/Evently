@@ -17,7 +17,7 @@ internal static class SearchEvents
             Guid ? categoryId,
             DateTime? startDate,
             DateTime? endDate,
-            int page = 0,
+            int page = 1,
             int pageSize = 15) =>
         {
             Result<SearchEventsResponse> result = await sender.Send(

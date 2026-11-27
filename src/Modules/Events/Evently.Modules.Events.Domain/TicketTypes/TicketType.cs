@@ -38,6 +38,8 @@ public sealed class TicketType : Entity
             Quantity = quantity
         };
 
+        ticketType.Raise(new TicketTypeCreatedDomainEvent(ticketType.Id));
+
         return ticketType;
     }
 
